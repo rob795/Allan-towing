@@ -1,0 +1,64 @@
+{
+    "version": 2,
+    "buildCommand": "yarn build",
+    "outputDirectory": "build",
+    "installCommand": "yarn install",
+    "framework": "create-react-app",
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "rewrites": [
+        { "source": "/(.*)", "destination": "/index.html" }
+    ],
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
+                { "key": "X-Content-Type-Options", "value": "nosniff" },
+                { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+                { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+                { "key": "Permissions-Policy", "value": "geolocation=(self), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()" },
+                { "key": "X-XSS-Protection", "value": "1; mode=block" },
+                { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://www.clarity.ms https://cdn.callrail.com https://widgets.leadconnectorhq.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; frame-src 'self' https://www.google.com https://widgets.leadconnectorhq.com; connect-src 'self' https:; base-uri 'self'; form-action 'self' https://widgets.leadconnectorhq.com; frame-ancestors 'self'" }
+            ]
+        },
+        {
+            "source": "/static/(.*)",
+            "headers": [
+                { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+            ]
+        },
+        {
+            "source": "/(.*\\.(?:js|css|woff2?|ttf|eot|otf|jpg|jpeg|png|webp|avif|svg|ico|gif))",
+            "headers": [
+                { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+            ]
+        },
+        {
+            "source": "/sitemap.xml",
+            "headers": [
+                { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+                { "key": "Cache-Control", "value": "public, max-age=3600" }
+            ]
+        },
+        {
+            "source": "/robots.txt",
+            "headers": [
+                { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+                { "key": "Cache-Control", "value": "public, max-age=3600" }
+            ]
+        },
+        {
+            "source": "/manifest.json",
+            "headers": [
+                { "key": "Content-Type", "value": "application/manifest+json; charset=utf-8" },
+                { "key": "Cache-Control", "value": "public, max-age=86400" }
+            ]
+        }
+    ],
+    "redirects": [
+        { "source": "/home", "destination": "/", "permanent": true },
+        { "source": "/index", "destination": "/", "permanent": true },
+        { "source": "/index.html", "destination": "/", "permanent": true }
+    ]
+}

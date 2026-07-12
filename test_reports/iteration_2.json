@@ -1,0 +1,54 @@
+{
+  "summary": "All 9 production-readiness bug fixes verified and full regression from iteration 1 passes. Frontend supervisor was restarted once because the dev server was serving a cached (stale) version of public/index.html; after restart, the new head content (theme-color x2, manifest link, apple-mobile-web-app meta) is served correctly.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "bug_fix_verification": {
+    "BUG_FIX_1_no_emergent_script": "PASS — document.querySelector('script[src*=\"emergent.sh\"]') === null and raw HTML fetch confirms no 'emergent.sh' occurrence",
+    "BUG_FIX_2_posthog_absent": "PASS — typeof window.posthog === 'undefined'; posthog.__loaded falsy; no 'posthog' string in raw HTML",
+    "BUG_FIX_3_manifest_valid": "PASS — /manifest.json returns 200, valid JSON, name 'Allan Towing Co. — 24/7 Emergency Towing in Fontana, CA', start_url '/', shortcuts contains tel:+19092782226 and sms:+19092782226",
+    "BUG_FIX_4_manifest_link": "PASS — <link rel=\"manifest\" href=\"/manifest.json\"> present in head",
+    "BUG_FIX_5_theme_color_dual": "PASS — document.querySelectorAll('meta[name=theme-color]').length === 2 (dark #111111, light #FFFFFF with media queries)",
+    "BUG_FIX_6_sitemap_lastmod": "PASS — /sitemap.xml returns 200 and contains <lastmod>2026-01-15</lastmod>",
+    "BUG_FIX_7_robots_sitemap": "PASS — /robots.txt returns 200 and references sitemap.xml",
+    "BUG_FIX_8_heading_hierarchy": "PASS — exactly 1 <h1> and 7 <h2> tags",
+    "BUG_FIX_9_six_json_ld": "PASS — head contains 6 JSON-LD script tags (Organization, LocalBusiness, Service, FAQPage, BreadcrumbList, WebSite)"
+  },
+  "regression_verification": {
+    "hero_headline": "PASS — '24/7 EMERGENCY TOWING' and 'IN FONTANA, CA' present",
+    "tel_sms_links": "PASS — header contains tel: and sms: anchors",
+    "lang_toggle_persist": "PASS — clicking lang toggle sets localStorage 'atc_lang' to 'es'",
+    "service_cards": "PASS — all 6 (service-card-emergency/flatbed/jump/lockout/tire/fuel) render",
+    "why_choose_us": "PASS — 3 why-card-* elements",
+    "lead_form_submit": "PASS — filling form-name/form-phone/form-location/form-problem and clicking form-submit shows form-success ('Request received. We'll call you back shortly.')",
+    "map_iframe": "PASS — google.com/maps iframe present",
+    "city_links": "PASS — 7 city-* links (fontana, rialto, bloomington, ontario, rancho-cucamonga, colton, san-bernardino). Note: testids are city-{slug} not city-link-{slug}",
+    "reviews_carousel": "PASS — 5 review-* items",
+    "faq_accordion": "PASS — 5 faq-item-* elements; first item opens on click",
+    "footer_links": "PASS — footer has tel: and mailto: anchors",
+    "desktop_floating_chat": "PASS — floating-chat-toggle visible on 1440x900 and opens floating-chat-panel",
+    "mobile_call_bar": "PASS — mobile-call-bar visible on 375x812",
+    "mobile_floating_chat_hidden": "PASS — floating chat hidden on mobile viewport",
+    "console_errors": "PASS — no console errors on load"
+  },
+  "vercel_json_security_headers": {
+    "location_root": "/app/vercel.json — contains Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy, X-XSS-Protection, Content-Security-Policy, plus SPA rewrite /(.*) -> /index.html",
+    "location_frontend": "/app/frontend/vercel.json — identical security headers block present",
+    "note": "Not runtime-testable on the preview URL (deployment-only); source files verified via file read"
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Frontend dev server (CRA) caches public/index.html in memory — future edits to index.html require a supervisorctl restart frontend to reflect on the preview URL (already done in this run). Consider documenting this or automating via a nodemon-style watcher.",
+    "Two vercel.json files (root and frontend/) are 100% duplicated — DRY violation. Recommend keeping only /app/vercel.json for a monorepo deployment or /app/frontend/vercel.json if deploying from frontend subdir, but not both."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (frontend-only iteration)", "frontend": "100%"},
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Preview served HTML matches /app/frontend/public/index.html only AFTER `sudo supervisorctl restart frontend`. If HTML changes seem missing, restart the dev server first. Lead-form testids are form-name/form-phone/form-location/form-vehicle/form-problem/form-submit (not lead-*). City link testids are city-{slug} (not city-link-{slug})."
+}

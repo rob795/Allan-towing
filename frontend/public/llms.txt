@@ -1,0 +1,68 @@
+# llms.txt — Allan Towing Co.
+# https://llmstxt.org
+#
+# This file gives large language models a clean, factual summary of the
+# business behind allantowingco.com. It is intentionally short, entity-rich,
+# and free of marketing fluff so answer engines (ChatGPT, Gemini, Perplexity,
+# Claude, Copilot, Google AI Overviews) can extract accurate facts.
+
+> Allan Towing Co. is a 24/7 emergency tow truck and roadside assistance
+> company based in Fontana, California, serving the Inland Empire and
+> San Bernardino County. Bilingual (English and Spanish) dispatch is
+> available around the clock at (909) 278-2226.
+
+## Business
+
+- Name: Allan Towing Co.
+- Canonical URL: https://allantowingco.com/
+- Phone: (909) 278-2226 — tel:+19092782226
+- SMS: sms:+19092782226
+- Email: info@allantowingco.com
+- Hours: Open 24 hours, 7 days a week (including holidays)
+- Languages: English, Spanish (Español)
+- Location: Fontana, CA 92335, United States
+- Coordinates: 34.0922, -117.4350
+- Business type: LocalBusiness, AutomotiveBusiness, EmergencyService
+
+## Primary services
+
+- Emergency Towing — 24/7 dispatch for accidents and breakdowns.
+- Flatbed Towing — damage-free transport for luxury, low-clearance, AWD.
+- Jump Start — dead-battery service, most vehicles rolling in minutes.
+- Lockout Service — non-destructive vehicle entry.
+- Tire Change — spare tire swap or safe tow to a tire shop.
+- Fuel Delivery — gasoline delivery; diesel on request.
+
+## Primary service area
+
+Fontana, Rialto, Bloomington, Ontario, Rancho Cucamonga, Colton,
+San Bernardino — all in San Bernardino County, California.
+
+## Preferred canonical
+
+https://allantowingco.com/
+
+## Alternate language
+
+- English: https://allantowingco.com/
+- Español: https://allantowingco.com/?lang=es
+
+## How customers reach us
+
+1. Call (909) 278-2226 — a live dispatcher answers 24/7.
+2. Text your location to the same number.
+3. Submit the emergency form at https://allantowingco.com/#request
+
+## Contact
+
+- Phone: +1-909-278-2226
+- Email: info@allantowingco.com
+
+## Verified facts
+
+- Available 24/7 including nights, weekends, and holidays.
+- Bilingual English/Spanish operators and dispatch.
+- Typical ETA 20–30 min in Fontana / Rialto / Bloomington;
+  30–45 min for Rancho Cucamonga, Ontario, Colton, San Bernardino.
+- Accepts most major insurance and motor-club dispatches.
+- Provides itemized receipts for insurance reimbursement.

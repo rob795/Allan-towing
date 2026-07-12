@@ -1,0 +1,106 @@
+{
+  "theme": "light_with_dark_accents",
+  "typography": {
+    "headings": {
+      "font_family": "Oswald, sans-serif",
+      "weights": ["400", "500", "700"],
+      "usage": "Use for all main section titles, hero headlines, and numbers. Apply tight tracking for impact.",
+      "h1": "text-4xl sm:text-5xl lg:text-6xl uppercase font-bold tracking-tighter leading-tight",
+      "h2": "text-3xl sm:text-4xl uppercase font-bold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-bold uppercase",
+      "h4": "text-lg sm:text-xl font-bold uppercase"
+    },
+    "body": {
+      "font_family": "Inter, sans-serif",
+      "weights": ["400", "500", "600", "700"],
+      "usage": "Use for paragraphs, labels, secondary text. Keep leading relaxed.",
+      "base": "text-base leading-relaxed",
+      "small": "text-sm leading-normal",
+      "buttons": "text-base font-bold uppercase tracking-wider"
+    }
+  },
+  "colors": {
+    "primary": "#111111",
+    "secondary": "#FFC400",
+    "accent": "#D32F2F",
+    "background": "#FFFFFF",
+    "light_section": "#F6F6F6",
+    "text": "#1A1A1A",
+    "application_rules": {
+      "primary": "Use for high-contrast sections like the Header, Hero text containers, Footer, and active states. Gives a 'dark mode' vibe despite light background.",
+      "secondary": "Use for primary CTA buttons (Call Now), hover states, and highlighting key trust metrics. Text on secondary should be #111111.",
+      "accent": "ONLY use for emergency elements (Emergency Mobile Call Bar, Urgent Badges, Error States).",
+      "background": "Main body background.",
+      "light_section": "Alternate section background (e.g., Why Choose Us, Reviews, Form area).",
+      "text": "Default text color on light backgrounds. Use #FFFFFF on primary backgrounds."
+    }
+  },
+  "visual_enhancers": {
+    "shadows": "Use clean, solid-color offset shadows for cards (e.g., shadow-[4px_4px_0px_#111111]) to create a structured, trustworthy, no-nonsense vibe. Avoid soft, muddy blurs.",
+    "borders": "1px or 2px solid #111111 on cards, form inputs, and buttons.",
+    "border_radius": "rounded-lg or rounded-xl for a modern, approachable feel under stress. Keep it consistent.",
+    "animations": "Subtle and fast. Under-stress users want instant feedback. Hover: -translate-y-1 transition-transform duration-200.",
+    "glassmorphism": "AVOID in emergency contexts. Use solid, opaque colors to maximize legibility and speed."
+  },
+  "grids_and_layouts": {
+    "hero": "Relative container with full background image and heavy dark overlay (bg-black/60). Left-aligned content block on desktop, center-aligned on mobile. Prominent phone number and massive CTA buttons.",
+    "services_grid": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6. Use solid cards.",
+    "why_choose_us": "Bento-style or 3-column grid (grid-cols-1 md:grid-cols-3).",
+    "service_area": "Flex or Grid layout: 1/3 text and city list, 2/3 map placeholder (a gray box with a map icon).",
+    "mobile_first_rules": "Always stack content on mobile. Keep forms extremely short. Provide massive tap targets."
+  },
+  "components_and_sections": {
+    "header": {
+      "description": "Sticky at top (z-40). Solid #111111 background, white text. Contains text logo 'ALLAN TOWING CO.', Phone Number (909) 278-2226, Language toggle (EN/ES), and a prominent 'Call Now' button in #FFC400."
+    },
+    "hero": {
+      "description": "Headline: '24/7 Emergency Towing in Fontana, CA'. Subheadline explaining speed and reliability. Buttons: 'Call Now' (#FFC400) and 'Text My Location' (outline white). Include Trust Badges below buttons."
+    },
+    "emergency_services": {
+      "description": "6 cards (Emergency Towing, Flatbed Towing, Jump Start, Lockout, Tire Change, Fuel Delivery). Include lucide-react icons. 2-sentence description, small 'Request' CTA."
+    },
+    "lead_form": {
+      "description": "GHL placeholder form inside a distinct #F6F6F6 section. Inputs: Name, Phone, Current Location, Vehicle, Problem. Submit button full-width #111111."
+    },
+    "reviews_and_faq": {
+      "description": "Horizontal scrolling carousel for Google reviews placeholder. Accordion (Shadcn) for FAQ (Cost, response time, 24/7, insurance, Spanish)."
+    },
+    "mobile_call_bar": {
+      "description": "fixed bottom-0 left-0 right-0 p-4 bg-[#D32F2F] flex justify-center items-center shadow-[0_-4px_10px_rgba(0,0,0,0.2)] z-50 md:hidden. Button: 'TAP TO CALL - (909) 278-2226' in bright white font-bold text-lg."
+    },
+    "floating_chat": {
+      "description": "fixed bottom-6 right-6 w-14 h-14 bg-[#111111] text-white rounded-full flex items-center justify-center shadow-lg z-40 hidden md:flex (since mobile has the bottom bar)."
+    }
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1601508836900-ee2aa7840a7b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwxfHxmbGF0YmVkJTIwdG93JTIwdHJ1Y2t8ZW58MHx8fHwxNzgzODA0NzUwfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Black flatbed tow truck on road during daytime. Apply a black/70 overlay to allow text readability.",
+      "category": "hero"
+    },
+    "roadside_assistance": {
+      "url": "https://images.unsplash.com/photo-1657524241529-dc4835de4049?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxyb2Fkc2lkZSUyMGFzc2lzdGFuY2V8ZW58MHx8fHwxNzgzODA0NzUwfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Car on the side of the road, representing breakdown scenario. Good for Why Choose Us or Services context.",
+      "category": "content"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Install 'Oswald' and 'Inter' fonts via Google Fonts in index.html.",
+    "Configure tailwind.config.js with the locked colors: primary '#111111', secondary '#FFC400', accent '#D32F2F', light '#F6F6F6'.",
+    "Use 'lucide-react' for all icons.",
+    "Build the Sticky Mobile Call bar (fixed bottom-0 z-50) using the #D32F2F accent color. Only show on md:hidden.",
+    "Implement language toggle visually (no functional translation needed, just EN/ES state highlight).",
+    "Ensure large tap targets (min 48px height) for all buttons and links.",
+    "Do NOT use generic generic vector illustrations. Use the provided Unsplash URLs or clean geometric map placeholders.",
+    "Add data-testid on all forms, CTAs, and interactive elements (e.g., data-testid='hero-call-button').",
+    "Keep the Shadcn Form, Accordion, and Dialog clean—override default styles with hard borders to match the aesthetic."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not use generic centered layouts. Opt for strong left-aligned typography.",
+    "Do not use AI emoji characters.",
+    "Ensure every interaction has a clear hover/active state.",
+    "Prioritize accessibility: Use clear focus rings.",
+    "Do NOT use complete transparent backgrounds in header. Use solid #111111.",
+    "Use Shadcn UI components for complex interactivity (Form, Accordion), customized to the brand."
+  ]
+}

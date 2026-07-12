@@ -1,0 +1,28 @@
+/* humans.txt — the humans responsible for allantowingco.com */
+/* https://humanstxt.org/                                    */
+
+/* TEAM */
+  Company:     Allan Towing Co.
+  Website:     https://allantowingco.com/
+  Location:    Fontana, California, USA
+  Phone:       (909) 278-2226
+  Contact:     info@allantowingco.com
+  Languages:   English, Spanish
+
+/* PURPOSE */
+  A production landing page for a 24/7 emergency towing and roadside
+  assistance business. Built to convert stressed roadside callers into
+  phone calls with zero friction.
+
+/* TECHNOLOGY COLOPHON */
+  Framework:   React 19 (Create React App / Craco)
+  Styling:     Tailwind CSS + shadcn/ui
+  Icons:       lucide-react
+  Fonts:       Oswald + Inter (Google Fonts)
+  Hosting:     Vercel (recommended)
+  Analytics:   GA4 / GTM / Meta Pixel / Microsoft Clarity / CallRail (placeholders)
+  Forms:       GoHighLevel (placeholder integration)
+  Structured:  JSON-LD (LocalBusiness, Organization, Service, FAQ, Breadcrumb, WebSite)
+
+/* THANKS */
+  This project is the reference build for the Bucket Leads Local Service Template.
