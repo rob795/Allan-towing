@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { translations } from "@/i18n/translations";
 import { trackEvent, EVENTS } from "@/lib/tracking";
 
@@ -24,15 +24,15 @@ export const LanguageProvider = ({ children }) => {
         }
     }, [lang]);
 
-    const toggleLang = (next) => {
+    const toggleLang = useCallback((next) => {
         const target = next || (lang === "en" ? "es" : "en");
         setLang(target);
         trackEvent(EVENTS.LANG_TOGGLE, { language: target });
-    };
+    }, [lang]);
 
     const value = useMemo(
         () => ({ lang, setLang: toggleLang, t: translations[lang] }),
-        [lang],
+        [lang, toggleLang],
     );
 
     return (
