@@ -1,5 +1,6 @@
 import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import { BUSINESS } from "@/constants/business";
+import { SITE_CONFIG } from "@/config/site.config";
 import { useLanguage } from "@/context/LanguageContext";
 
 export const Footer = () => {
@@ -13,12 +14,18 @@ export const Footer = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     <div className="col-span-2 md:col-span-1">
                         <div className="flex items-center gap-2 mb-3">
-                            <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-brand-secondary text-brand-primary font-heading font-bold">
-                                A
-                            </span>
-                            <span className="font-heading font-bold uppercase tracking-tight text-white text-lg">
-                                Allan Towing Co.
-                            </span>
+                            <picture>
+                                <source srcSet={SITE_CONFIG.assets.logoFullWebp} type="image/webp" />
+                                <img
+                                    src={SITE_CONFIG.assets.logoFullPng}
+                                    alt="Allan Towing Co. logo"
+                                    width="194"
+                                    height="90"
+                                    className="h-[52px] w-auto object-contain"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </picture>
                         </div>
                         <p className="text-sm leading-relaxed text-white/60 max-w-xs">
                             {t.footer.tagline}
@@ -75,7 +82,7 @@ export const Footer = () => {
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <a
-                                    href="#privacy"
+                                    href="/privacy"
                                     className="hover:text-brand-secondary"
                                     data-testid="footer-privacy"
                                 >
@@ -84,7 +91,7 @@ export const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="#terms"
+                                    href="/terms"
                                     className="hover:text-brand-secondary"
                                     data-testid="footer-terms"
                                 >

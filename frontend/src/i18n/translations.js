@@ -79,7 +79,7 @@ export const translations = {
             eyebrow: "Emergency Assistance",
             title: "Request a tow right now",
             subtitle:
-                "Fill this out and we'll call you back in under 2 minutes. For fastest response, call (909) 278-2226.",
+                "Share your details and our team will follow up. For the fastest response, call (909) 278-2226 now.",
             name: "Full Name",
             phone: "Phone Number",
             location: "Current Location / Cross Streets",
@@ -87,9 +87,9 @@ export const translations = {
             problem: "What happened?",
             problemPh: "Flat tire, out of gas, need a tow to...",
             submit: "Request Emergency Help",
-            submitted: "Request received. We'll call you back shortly.",
+            submitted: "Request captured. For immediate help, call (909) 278-2226.",
             placeholderNote:
-                "This form will connect to GoHighLevel for real submissions.",
+                "This on-page form is a demo flow until GoHighLevel is connected.",
         },
         area: {
             eyebrow: "Service Area",
@@ -259,7 +259,7 @@ export const translations = {
             eyebrow: "Asistencia de Emergencia",
             title: "Solicite una grúa ahora",
             subtitle:
-                "Llene esto y le llamamos en menos de 2 minutos. Para respuesta más rápida, llame al (909) 278-2226.",
+                "Comparta sus datos y nuestro equipo le dará seguimiento. Para respuesta inmediata, llame ahora al (909) 278-2226.",
             name: "Nombre Completo",
             phone: "Número de Teléfono",
             location: "Ubicación / Calles Cercanas",
@@ -267,9 +267,9 @@ export const translations = {
             problem: "¿Qué pasó?",
             problemPh: "Llanta ponchada, sin gasolina, necesito grúa a...",
             submit: "Solicitar Ayuda de Emergencia",
-            submitted: "Solicitud recibida. Le llamaremos en breve.",
+            submitted: "Solicitud registrada. Para ayuda inmediata, llame al (909) 278-2226.",
             placeholderNote:
-                "Este formulario se conectará a GoHighLevel para envíos reales.",
+                "Este formulario en la página es una demostración hasta conectar GoHighLevel.",
         },
         area: {
             eyebrow: "Área de Servicio",

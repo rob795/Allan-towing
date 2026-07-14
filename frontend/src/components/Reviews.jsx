@@ -82,8 +82,8 @@ export const Reviews = () => {
                     ))}
                 </div>
                 <p className="text-xs text-brand-text/50 mt-4">
-                    Google Reviews carousel — placeholder. Real reviews will sync when
-                    connected to Google Business Profile.
+                    Google review feed can be connected to publish live verified
+                    updates from your Business Profile.
                 </p>
             </div>
         </section>
