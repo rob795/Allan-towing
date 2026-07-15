@@ -3,7 +3,6 @@ import {
     Layers,
     BatteryCharging,
     KeyRound,
-    CircleDot,
     Fuel,
     ArrowRight,
 } from "lucide-react";
@@ -19,7 +18,6 @@ export const Services = () => {
         { key: "flatbed", Icon: Layers },
         { key: "jump", Icon: BatteryCharging },
         { key: "lockout", Icon: KeyRound },
-        { key: "tire", Icon: CircleDot },
         { key: "fuel", Icon: Fuel },
     ];
 
