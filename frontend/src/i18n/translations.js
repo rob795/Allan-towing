@@ -47,10 +47,6 @@ export const translations = {
                     title: "Lockout Service",
                     desc: "Locked keys inside your car? Our technicians unlock most vehicles in minutes without damaging the door or window.",
                 },
-                tire: {
-                    title: "Tire Change",
-                    desc: "Flat on the highway or in a parking lot — we'll swap in your spare or trailer you to a tire shop safely.",
-                },
                 fuel: {
                     title: "Fuel Delivery",
                     desc: "Ran out of gas? We deliver enough fuel to get you to the nearest station. Diesel available on request.",
@@ -88,8 +84,6 @@ export const translations = {
             problemPh: "Flat tire, out of gas, need a tow to...",
             submit: "Request Emergency Help",
             submitted: "Request captured. For immediate help, call (909) 278-2226.",
-            placeholderNote:
-                "This on-page form is a demo flow until GoHighLevel is connected.",
         },
         area: {
             eyebrow: "Service Area",
@@ -129,7 +123,7 @@ export const translations = {
                 {
                     name: "Tyler R.",
                     city: "Rancho Cucamonga, CA",
-                    text: "Blew a tire coming off Foothill. They swapped my spare in the pouring rain and refused a tip. Genuinely good people.",
+                    text: "Blew a tire coming off Foothill. They got me to a tire shop in the pouring rain and refused a tip. Genuinely good people.",
                     rating: 5,
                 },
             ],
@@ -227,10 +221,6 @@ export const translations = {
                     title: "Abrir Carro",
                     desc: "¿Llaves adentro del carro? Nuestros técnicos abren la mayoría de vehículos en minutos sin dañar la puerta ni el vidrio.",
                 },
-                tire: {
-                    title: "Cambio de Llanta",
-                    desc: "¿Llanta ponchada? Cambiamos su llanta por la de repuesto o lo llevamos con seguridad al taller más cercano.",
-                },
                 fuel: {
                     title: "Entrega de Gasolina",
                     desc: "¿Se quedó sin gasolina? Le llevamos suficiente combustible para llegar a la estación más cercana. Diésel disponible.",
@@ -268,8 +258,6 @@ export const translations = {
             problemPh: "Llanta ponchada, sin gasolina, necesito grúa a...",
             submit: "Solicitar Ayuda de Emergencia",
             submitted: "Solicitud registrada. Para ayuda inmediata, llame al (909) 278-2226.",
-            placeholderNote:
-                "Este formulario en la página es una demostración hasta conectar GoHighLevel.",
         },
         area: {
             eyebrow: "Área de Servicio",
@@ -309,7 +297,7 @@ export const translations = {
                 {
                     name: "Tyler R.",
                     city: "Rancho Cucamonga, CA",
-                    text: "Se me reventó una llanta saliendo de Foothill. Me la cambiaron bajo la lluvia y no aceptaron propina. Gente realmente buena.",
+                    text: "Se me reventó una llanta saliendo de Foothill. Me llevaron a un taller bajo la lluvia y no aceptaron propina. Gente realmente buena.",
                     rating: 5,
                 },
             ],

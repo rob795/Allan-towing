@@ -19,7 +19,7 @@ export const SITE_CONFIG = {
         legalName: "Allan Towing Co.",
         tagline: "24/7 Emergency Towing — Based in Fontana, California",
         description:
-            "Fast, reliable 24/7 towing and roadside assistance based in Fontana, California. Emergency towing, flatbed towing, jump start, lockout, tire change, and fuel delivery. Bilingual English & Español dispatch.",
+            "Fast, reliable 24/7 towing and roadside assistance based in Fontana, California. Emergency towing, flatbed towing, jump start, lockout, and fuel delivery. Bilingual English & Español dispatch.",
         founded: "2015",
         priceRange: "$$",
         currency: "USD",
@@ -167,9 +167,9 @@ export const SITE_CONFIG = {
         titleEs:
             "Grúa 24/7 en Fontana, California | Allan Towing Co. — (909) 278-2226",
         descriptionEn:
-            "24/7 emergency towing and roadside assistance based in Fontana, California. Fast flatbed towing, jump start, lockout, tire change, and fuel delivery. Bilingual English & Español. Call (909) 278-2226.",
+            "24/7 emergency towing and roadside assistance based in Fontana, California. Fast flatbed towing, jump start, lockout, and fuel delivery. Bilingual English & Español. Call (909) 278-2226.",
         descriptionEs:
-            "Grúa de emergencia y asistencia en carretera 24/7 con base en Fontana, California. Grúa de plataforma, pasar corriente, abrir carro, cambio de llanta y entrega de gasolina. Bilingüe English & Español.",
+            "Grúa de emergencia y asistencia en carretera 24/7 con base en Fontana, California. Grúa de plataforma, pasar corriente, abrir carro y entrega de gasolina. Bilingüe English & Español.",
         ogImage: "/og/allan-towing-og.jpg",
         gscVerification: "REPLACE_WITH_GSC_TOKEN",
         bingVerification: "REPLACE_WITH_BING_TOKEN",

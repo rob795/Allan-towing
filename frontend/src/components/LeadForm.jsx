@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AlertCircle, CheckCircle2, Send } from "lucide-react";
+import { CheckCircle2, Send } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -41,12 +41,6 @@ export const LeadForm = () => {
                         <p className="mt-4 text-brand-text/70 leading-relaxed">
                             {t.form.subtitle}
                         </p>
-                        <div className="mt-6 flex items-start gap-3 rounded-lg border border-brand-accent/30 bg-brand-accent/5 p-4">
-                            <AlertCircle className="h-5 w-5 text-brand-accent shrink-0 mt-0.5" />
-                            <p className="text-sm text-brand-text/80">
-                                {t.form.placeholderNote}
-                            </p>
-                        </div>
                     </div>
 
                     <div className="lg:col-span-3">
