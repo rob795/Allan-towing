@@ -11,12 +11,12 @@ export const FloatingChat = () => {
     const copy = {
         en: {
             title: "Need help right now?",
-            body: "Live dispatcher standing by. This chat will connect to GoHighLevel when linked.",
+            body: "Live dispatcher is available now by phone. Live chat can be enabled when connected.",
             cta: "Call Dispatcher",
         },
         es: {
             title: "¿Necesita ayuda ahora?",
-            body: "Despachador en vivo esperando. Este chat se conectará a GoHighLevel.",
+            body: "Un despachador en vivo está disponible por teléfono. El chat en vivo se puede activar al conectarlo.",
             cta: "Llamar Despachador",
         },
     }[lang];
@@ -58,7 +58,7 @@ export const FloatingChat = () => {
                         {copy.cta}
                     </a>
                     <p className="mt-3 text-[10px] uppercase tracking-widest text-brand-text/40 text-center">
-                        GHL Chat Placeholder
+                        Phone support available 24/7
                     </p>
                 </div>
             )}

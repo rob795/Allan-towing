@@ -2,9 +2,7 @@ import { Phone, MessageSquare, Clock, Zap, MapPin, Languages } from "lucide-reac
 import { BUSINESS } from "@/constants/business";
 import { useLanguage } from "@/context/LanguageContext";
 import { trackEvent, EVENTS } from "@/lib/tracking";
-
-const HERO_IMAGE =
-    "https://images.unsplash.com/photo-1601508836900-ee2aa7840a7b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwxfHxmbGF0YmVkJTIwdG93JTIwdHJ1Y2t8ZW58MHx8fHwxNzgzODA0NzUwfDA&ixlib=rb-4.1.0&q=85";
+import HeroImage from "@/components/HeroImage";
 
 const Badge = ({ icon: Icon, label, testid }) => (
     <div
@@ -29,15 +27,15 @@ export const Hero = () => {
         >
             {/* Background image */}
             <div className="absolute inset-0 -z-10">
-                <img
-                    src={HERO_IMAGE}
-                    alt="Allan Towing Co. flatbed tow truck in Fontana, CA"
-                    className="h-full w-full object-cover"
-                    loading="eager"
-                    fetchPriority="high"
+                <HeroImage className="h-full w-full object-cover object-right" />
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        background:
+                            "linear-gradient(90deg, rgba(5,7,10,0.94) 0%, rgba(5,7,10,0.80) 38%, rgba(5,7,10,0.36) 68%, rgba(5,7,10,0.18) 100%)",
+                    }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/95 via-brand-primary/80 to-brand-primary/40" />
-                <div className="absolute inset-0 bg-brand-primary/40" />
+                <div className="absolute inset-0 bg-brand-primary/22 sm:bg-brand-primary/16" />
             </div>
 
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-24 lg:py-32">

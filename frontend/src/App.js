@@ -14,9 +14,11 @@ import { Footer } from "@/components/Footer";
 import { MobileCallBar } from "@/components/MobileCallBar";
 import { FloatingChat } from "@/components/FloatingChat";
 import { Toaster } from "@/components/ui/sonner";
+import { PrivacyPage } from "@/pages/PrivacyPage";
+import { TermsPage } from "@/pages/TermsPage";
 
 const Home = () => (
-    <main data-testid="home-page">
+    <main id="main-content" tabIndex="-1" data-testid="home-page">
         <Header />
         <Hero />
         <Services />
@@ -35,10 +37,15 @@ const Home = () => (
 function App() {
     return (
         <LanguageProvider>
+            <a href="#main-content" className="skip-link">
+                Skip to main content
+            </a>
             <div className="App">
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<Home />} />
+                        <Route path="/privacy" element={<PrivacyPage />} />
+                        <Route path="/terms" element={<TermsPage />} />
                         <Route path="*" element={<Home />} />
                     </Routes>
                 </BrowserRouter>

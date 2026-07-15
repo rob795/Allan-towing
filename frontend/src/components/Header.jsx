@@ -1,6 +1,7 @@
 import { Phone, MessageSquare, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { BUSINESS } from "@/constants/business";
+import { SITE_CONFIG } from "@/config/site.config";
 import { useLanguage } from "@/context/LanguageContext";
 import { trackEvent, EVENTS } from "@/lib/tracking";
 
@@ -33,20 +34,26 @@ export const Header = () => {
                     {/* Logo */}
                     <a
                         href="#top"
-                        className="flex items-center gap-2 shrink-0"
+                        className="flex items-center shrink-0"
                         data-testid="logo-link"
+                        aria-label="Allan Towing Co."
                     >
-                        <span
-                            className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-brand-secondary text-brand-primary font-heading font-bold text-lg"
-                            aria-hidden="true"
-                        >
-                            A
-                        </span>
-                        <span className="font-heading font-bold tracking-tight text-lg md:text-xl uppercase leading-none">
-                            <span className="text-white">Allan</span>{" "}
-                            <span className="text-brand-secondary">Towing</span>{" "}
-                            <span className="text-white/70">Co.</span>
-                        </span>
+                        <picture>
+                            <source
+                                srcSet={`${SITE_CONFIG.assets.logoNavbarWebp} 1x, ${SITE_CONFIG.assets.logoNavbarWebp2x} 2x`}
+                                type="image/webp"
+                            />
+                            <img
+                                src={SITE_CONFIG.assets.logoNavbarPng}
+                                srcSet={`${SITE_CONFIG.assets.logoNavbarPng} 1x, ${SITE_CONFIG.assets.logoNavbarPng2x} 2x`}
+                                alt="Allan Towing Co."
+                                width="189"
+                                height="88"
+                                className="h-10 md:h-11 w-auto object-contain"
+                                loading="eager"
+                                decoding="async"
+                            />
+                        </picture>
                     </a>
 
                     {/* Desktop nav */}
@@ -117,6 +124,8 @@ export const Header = () => {
                             className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white"
                             onClick={() => setOpen((v) => !v)}
                             aria-label="Toggle menu"
+                            aria-expanded={open}
+                            aria-controls="mobile-menu-panel"
                             data-testid="mobile-menu-toggle"
                         >
                             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -127,6 +136,7 @@ export const Header = () => {
                 {/* Mobile menu */}
                 {open && (
                     <div
+                        id="mobile-menu-panel"
                         className="lg:hidden pb-4 flex flex-col gap-3 border-t border-white/10 pt-4"
                         data-testid="mobile-menu"
                     >

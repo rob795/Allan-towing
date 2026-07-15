@@ -17,9 +17,9 @@ export const SITE_CONFIG = {
         name: "Allan Towing Co.",
         shortName: "Allan Towing",
         legalName: "Allan Towing Co.",
-        tagline: "24/7 Emergency Towing in Fontana, CA",
+        tagline: "24/7 Emergency Towing — Based in Fontana, California",
         description:
-            "Fast, reliable 24/7 towing and roadside assistance in Fontana, CA. Emergency towing, flatbed towing, jump start, lockout, tire change, and fuel delivery. Bilingual English & Español dispatch.",
+            "Fast, reliable 24/7 towing and roadside assistance based in Fontana, California. Emergency towing, flatbed towing, jump start, lockout, tire change, and fuel delivery. Bilingual English & Español dispatch.",
         founded: "2015",
         priceRange: "$$",
         currency: "USD",
@@ -49,16 +49,16 @@ export const SITE_CONFIG = {
     //  LOCATION / SERVICE AREA
     // -------------------------------------------------------------------------
     location: {
-        addressStreet: "Fontana, CA",
+        addressStreet: "Headquartered in Fontana, California.",
         city: "Fontana",
-        region: "CA",
+        region: "California",
         regionFull: "California",
-        postalCode: "92335",
+        postalCode: "",
         country: "US",
         countryFull: "United States",
         latitude: 34.0922,
         longitude: -117.435,
-        mapsPlaceQuery: "Fontana, CA",
+        mapsPlaceQuery: "Fontana, California",
         mapsDirectionsUrl:
             "https://www.google.com/maps/dir/?api=1&destination=Fontana%2C+CA",
     },
@@ -89,25 +89,49 @@ export const SITE_CONFIG = {
     },
 
     // -------------------------------------------------------------------------
+    //  ASSETS (centralized paths for logos, icons, hero media, OG media)
+    // -------------------------------------------------------------------------
+    assets: {
+        logoFullWebp: "/brand/allan-logo-full.webp",
+        logoFullPng: "/brand/allan-logo-full.png",
+        logoHeaderWebp: "/brand/allan-logo-header.webp",
+        logoHeaderPng: "/brand/allan-logo-header.png",
+        logoNavbarWebp: "/brand/logo-navbar.webp",
+        logoNavbarWebp2x: "/brand/logo-navbar@2x.webp",
+        logoNavbarPng: "/brand/logo-navbar.png",
+        logoNavbarPng2x: "/brand/logo-navbar@2x.png",
+        icon: "/android-chrome-192x192.png",
+        ogImage: "/og/allan-towing-og.jpg",
+        hero: {
+            avif800: "/images/hero/allan-fleet-800.avif",
+            avif1200: "/images/hero/allan-fleet-1200.avif",
+            avif1600: "/images/hero/allan-fleet-1600.avif",
+            webp800: "/images/hero/allan-fleet-800.webp",
+            webp1200: "/images/hero/allan-fleet-1200.webp",
+            webp1600: "/images/hero/allan-fleet-1600.webp",
+            fallbackJpg: "/images/hero/allan-fleet-fallback.jpg",
+            width: 1600,
+            height: 900,
+            alt: "Three flatbed tow trucks prepared for roadside service.",
+            preloadHref: "/images/hero/allan-fleet-1200.webp",
+        },
+    },
+
+    // -------------------------------------------------------------------------
     //  HERO IMAGE
     //  Drop optimised assets into /public/images/hero/. See
     //  /public/images/hero/README.md for exact filenames + sizes.
     //  The <HeroImage /> component will automatically pick AVIF > WebP > JPG.
     // -------------------------------------------------------------------------
     heroImage: {
-        // Local paths served from /public. Replace files, not paths.
-        avif: "/images/hero/hero-1600.avif",
-        webp: "/images/hero/hero-1600.webp",
-        jpg: "/images/hero/hero-1600.jpg",
-        // Fallback CDN URL used until local files exist (see README).
-        fallback:
-            "https://images.unsplash.com/photo-1601508836900-ee2aa7840a7b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwxfHxmbGF0YmVkJTIwdG93JTIwdHJ1Y2t8ZW58MHx8fHwxNzgzODA0NzUwfDA&ixlib=rb-4.1.0&q=85&w=1600",
-        alt: "Allan Towing Co. flatbed tow truck operating at night in Fontana, CA",
-        // Explicit dimensions prevent CLS while the image loads.
+        avif: "/images/hero/allan-fleet-1600.avif",
+        webp: "/images/hero/allan-fleet-1600.webp",
+        jpg: "/images/hero/allan-fleet-fallback.jpg",
+        fallback: "/images/hero/allan-fleet-fallback.jpg",
+        alt: "Three flatbed tow trucks prepared for roadside service.",
         width: 1600,
         height: 900,
-        // Preload the mid-size WebP variant for LCP.
-        preloadHref: "/images/hero/hero-1200.webp",
+        preloadHref: "/images/hero/allan-fleet-1200.webp",
     },
 
     // -------------------------------------------------------------------------
@@ -139,15 +163,14 @@ export const SITE_CONFIG = {
         defaultLocale: "en-US",
         supportedLocales: ["en-US", "es-US"],
         titleEn:
-            "24/7 Tow Truck in Fontana, CA | Allan Towing Co. — (909) 278-2226",
+            "24/7 Tow Truck in Fontana, California | Allan Towing Co. — (909) 278-2226",
         titleEs:
-            "Grúa 24/7 en Fontana, CA | Allan Towing Co. — (909) 278-2226",
+            "Grúa 24/7 en Fontana, California | Allan Towing Co. — (909) 278-2226",
         descriptionEn:
-            "24/7 emergency towing and roadside assistance in Fontana, CA. Fast flatbed towing, jump start, lockout, tire change, and fuel delivery. Bilingual English & Español. Call (909) 278-2226.",
+            "24/7 emergency towing and roadside assistance based in Fontana, California. Fast flatbed towing, jump start, lockout, tire change, and fuel delivery. Bilingual English & Español. Call (909) 278-2226.",
         descriptionEs:
-            "Grúa de emergencia y asistencia en carretera 24/7 en Fontana, CA. Grúa de plataforma, pasar corriente, abrir carro, cambio de llanta y entrega de gasolina. Bilingüe English & Español.",
-        ogImage:
-            "https://images.unsplash.com/photo-1601508836900-ee2aa7840a7b?crop=entropy&cs=srgb&fm=jpg&w=1200&h=630&fit=crop",
+            "Grúa de emergencia y asistencia en carretera 24/7 con base en Fontana, California. Grúa de plataforma, pasar corriente, abrir carro, cambio de llanta y entrega de gasolina. Bilingüe English & Español.",
+        ogImage: "/og/allan-towing-og.jpg",
         gscVerification: "REPLACE_WITH_GSC_TOKEN",
         bingVerification: "REPLACE_WITH_BING_TOKEN",
     },
