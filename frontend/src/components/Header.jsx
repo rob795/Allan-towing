@@ -34,24 +34,26 @@ export const Header = () => {
                     {/* Logo */}
                     <a
                         href="#top"
-                        className="flex items-center gap-2.5 shrink-0"
+                        className="flex items-center shrink-0"
                         data-testid="logo-link"
+                        aria-label="Allan Towing Co."
                     >
-                        <img
-                            src={SITE_CONFIG.assets.icon}
-                            alt=""
-                            aria-hidden="true"
-                            width="36"
-                            height="36"
-                            className="h-9 w-9 rounded-md object-contain"
-                            loading="eager"
-                            decoding="async"
-                        />
-                        <span className="font-heading font-bold tracking-tight text-lg md:text-xl uppercase leading-none">
-                            <span className="text-white">Allan</span>{" "}
-                            <span className="text-brand-secondary">Towing</span>{" "}
-                            <span className="text-white/70">Co.</span>
-                        </span>
+                        <picture>
+                            <source
+                                srcSet={`${SITE_CONFIG.assets.logoNavbarWebp} 1x, ${SITE_CONFIG.assets.logoNavbarWebp2x} 2x`}
+                                type="image/webp"
+                            />
+                            <img
+                                src={SITE_CONFIG.assets.logoNavbarPng}
+                                srcSet={`${SITE_CONFIG.assets.logoNavbarPng} 1x, ${SITE_CONFIG.assets.logoNavbarPng2x} 2x`}
+                                alt="Allan Towing Co."
+                                width="189"
+                                height="88"
+                                className="h-10 md:h-11 w-auto object-contain"
+                                loading="eager"
+                                decoding="async"
+                            />
+                        </picture>
                     </a>
 
                     {/* Desktop nav */}

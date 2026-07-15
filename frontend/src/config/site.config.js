@@ -96,6 +96,10 @@ export const SITE_CONFIG = {
         logoFullPng: "/brand/allan-logo-full.png",
         logoHeaderWebp: "/brand/allan-logo-header.webp",
         logoHeaderPng: "/brand/allan-logo-header.png",
+        logoNavbarWebp: "/brand/logo-navbar.webp",
+        logoNavbarWebp2x: "/brand/logo-navbar@2x.webp",
+        logoNavbarPng: "/brand/logo-navbar.png",
+        logoNavbarPng2x: "/brand/logo-navbar@2x.png",
         icon: "/android-chrome-192x192.png",
         ogImage: "/og/allan-towing-og.jpg",
         hero: {
