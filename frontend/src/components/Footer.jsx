@@ -13,16 +13,20 @@ export const Footer = () => {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     <div className="col-span-2 md:col-span-1">
-                        <div className="flex items-center gap-2 mb-3">
+                        <div className="flex items-center mb-3">
                             <picture>
-                                <source srcSet={SITE_CONFIG.assets.logoFullWebp} type="image/webp" />
+                                <source
+                                    srcSet={`${SITE_CONFIG.assets.logoNavbarWebp} 1x, ${SITE_CONFIG.assets.logoNavbarWebp2x} 2x`}
+                                    type="image/webp"
+                                />
                                 <img
-                                    src={SITE_CONFIG.assets.logoFullPng}
-                                    alt="Allan Towing Co. logo"
-                                    width="194"
-                                    height="90"
-                                    className="h-[52px] w-auto object-contain"
-                                    loading="lazy"
+                                    src={SITE_CONFIG.assets.logoNavbarPng}
+                                    srcSet={`${SITE_CONFIG.assets.logoNavbarPng} 1x, ${SITE_CONFIG.assets.logoNavbarPng2x} 2x`}
+                                    alt="Allan Towing Co."
+                                    width="189"
+                                    height="88"
+                                    className="h-10 md:h-11 w-auto object-contain"
+                                    loading="eager"
                                     decoding="async"
                                 />
                             </picture>
