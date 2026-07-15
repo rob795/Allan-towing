@@ -110,7 +110,16 @@ export const Footer = () => {
                     <p>
                         © {new Date().getFullYear()} Allan Towing Co. {t.footer.rights}
                     </p>
-                    <p>Fontana, CA • Inland Empire • San Bernardino County</p>
+                    <div className="flex flex-col items-start md:items-end gap-1">
+                        <p>Fontana, CA • Inland Empire • San Bernardino County</p>
+                        <a
+                            href="https://bucketleads.com"
+                            rel="nofollow"
+                            className="text-white/60 hover:text-brand-secondary transition-colors"
+                        >
+                            Lead system powered by Bucket Leads
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
